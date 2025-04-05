@@ -5,3 +5,8 @@
 
 # Tool to iterate through given w10 install medias (*.iso files), and
 # to extract their Windows RE images from them and their details.
+
+Checksums=${1}
+Log=${Checksums%.sha1}.log
+
+rhash -cP "${Checksums}" | tee "${Log}"
