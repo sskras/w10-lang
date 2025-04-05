@@ -10,12 +10,17 @@ set -ex
 
 Checksums=${1}
 Log=${Checksums%.sha1}.log
+Buffer=$(mktemp)
 
 PATH=$PATH:~/debug/iso2winre.git
 
 rhash -cP "${Checksums}" | tee "${Log}"
 cat "${Log}" \
 | awk '/--\( Verifying / { STARTED=1; next } /^--------/ { STARTED=0 }; STARTED && / OK $/ { sub(/ +OK $/, ""); print }' \
-| while read FNAME; do
+> ${Buffer}
+
+  while read < ${Buffer} FNAME; do
     time iso2winre.ps1 $(cygpath -w $(realpath "${FNAME}")) -to wim -interact
   done
+
+rm -v ${Buffer}
