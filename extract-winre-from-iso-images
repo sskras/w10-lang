@@ -12,3 +12,6 @@ Log=${Checksums%.sha1}.log
 rhash -cP "${Checksums}" | tee "${Log}"
 cat "${Log}" \
 | awk '/--\( Verifying / { STARTED=1; next } /^--------/ { STARTED=0 }; STARTED && / OK $/ { sub(/ +OK $/, ""); print }' \
+| while read FNAME; do
+    echo "${FNAME}"
+  done
