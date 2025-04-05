@@ -1,1 +1,7 @@
 #! /usr/bin/env sh
+
+# SPDX-License-Identifier: BlueOak-1.0.0
+# SPDX-FileCopyrightText: 2025 Saulius Krasuckas <saulius2_at_ar-fi_point_lt> | sskras
+
+# Tool to iterate through given w10 install medias (*.iso files), and
+# to extract their Windows RE images from them and their details.
