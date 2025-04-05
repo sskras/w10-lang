@@ -39,3 +39,6 @@ all:
 
 desc:
 	@echo "${A}"
+
+get-lang:
+	C:/Windows/System32/Dism.exe //online //get-intl
