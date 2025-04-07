@@ -15,6 +15,8 @@ Output_dir='REs'
 
 PATH=$PATH:~/debug/iso2winre.git
 
+mkdir -v "${Output_dir}"
+
 rhash -cP "${Checksums}" | tee "${Log}"
 cat "${Log}" \
 | awk '/--\( Verifying / { STARTED=1; next } /^--------/ { STARTED=0 }; STARTED && / OK $/ { sub(/ +OK $/, ""); print }' \
@@ -23,7 +25,7 @@ cat "${Log}" \
 while read Fname <&3; do
   Full_dirn=$(cygpath -w $(realpath "${Output_dir}"))
   Full_name=$(cygpath -w $(realpath "${Fname}"))
-  time iso2winre.ps1 "${Full_name}" -to "${Full_dirn}"
+  time iso2winre.ps1 "${Full_name}" -to "${Full_dirn}" 2>&1 | tee "${Output_dir}/${Fname}.log"
 done 3< ${Buffer}
 
 rm -v ${Buffer}
