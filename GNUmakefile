@@ -42,3 +42,6 @@ desc:
 
 get-lang:
 	C:/Windows/System32/Dism.exe //online //get-intl
+
+extract:
+	cd ISOs && time ../extract-winre-from-iso-images z.sha1 |& tee extract-winre-from-iso-images.log
