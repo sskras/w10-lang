@@ -20,7 +20,7 @@ cat "${Log}" \
 > ${Buffer}
 
 while read FNAME <&3; do
-    time iso2winre.ps1 $(cygpath -w $(realpath "${FNAME}")) -to .\wim
+    time iso2winre.ps1 $(cygpath -w $(realpath "${FNAME}")) -to '.\output'
 done 3< ${Buffer}
 
 rm -v ${Buffer}
