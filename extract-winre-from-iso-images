@@ -19,8 +19,8 @@ cat "${Log}" \
 | awk '/--\( Verifying / { STARTED=1; next } /^--------/ { STARTED=0 }; STARTED && / OK $/ { sub(/ +OK $/, ""); print }' \
 > ${Buffer}
 
-while read FNAME <&3; do
-    time iso2winre.ps1 $(cygpath -w $(realpath "${FNAME}")) -to '.\REs'
+while read Fname <&3; do
+  time iso2winre.ps1 $(cygpath -w $(realpath "${Fname}")) -to '.\REs'
 done 3< ${Buffer}
 
 rm -v ${Buffer}
