@@ -11,7 +11,7 @@ set -ex
 Checksums=${1}
 Log=${Checksums%.sha1}.log
 Buffer=$(mktemp)
-Output_dir='REs'
+Output_dir='iso-logs'
 
 PATH=$PATH:~/debug/iso2winre.git
 
@@ -25,7 +25,7 @@ cat "${Log}" \
 while read Fname <&3; do
   Full_dirn=$(cygpath -w $(realpath "${Output_dir}"))
   Full_name=$(cygpath -w $(realpath "${Fname}"))
-  time iso2winre.ps1 "${Full_name}" -to "${Full_dirn}" 2>&1 | tee "${Output_dir}/${Fname}.log"
+  time iso2winre.ps1 "${Full_name}" -to '.\REs' 2>&1 | tee "${Output_dir}/${Fname}.log"
 done 3< ${Buffer}
 
 rm -v ${Buffer}
