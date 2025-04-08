@@ -41,6 +41,7 @@ desc:
 	@echo "${A}"
 
 get-lang:
+	powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
 	C:/Windows/System32/Dism.exe //online //get-intl
 
 extract:
