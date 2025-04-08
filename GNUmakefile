@@ -46,3 +46,12 @@ get-lang:
 
 extract:
 	cd ISOs && time ../extract-winre-from-iso-images z.sha1 |& tee extract-winre-from-iso-images.log
+
+out-files:
+	@cd /ppool/BACKUPS/Ginto-Čebatoriūno--Thinkpad-Edge-E531/01-DEV-files       && \
+	  rsync -avRH --info=progress2 --inplace /C/msys64* . --delete              && \
+	  rsync -avRH --info=progress2 --inplace /C/ISOs* .                         && \
+	  rsync -avRH --info=progress2 --inplace /C/Users/Renato/Downloads* .
+
+out-rhash:
+	@sh -c 'Dirs="/C/msys64 /C/ISOs /C/Users/Renato/Downloads"; (for Dir in $$Dirs; do cd $$Dir/..; Dirname=$$(basename $$Dir); rhash --sha1 -Pr $$Dirname | tee $$Dirname.sha1 ; done)'
