@@ -55,3 +55,12 @@ out-files:
 
 out-rhash:
 	@sh -c 'Dirs="/C/msys64 /C/ISOs /C/Users/Renato/Downloads"; (for Dir in $$Dirs; do cd $$Dir/..; Dirname=$$(basename $$Dir); rhash --sha1 -Pr $$Dirname | tee $$Dirname.sha1 ; done)'
+
+set-lang:
+	lpkgsetup  # choose en-US .cab from language .iso
+	reg add 'HKLM\SYSTEM\CurrentControlSet\Control\Nls\Language' //v InstallLanguage //d 0409 //f
+	shutdown /r /t 0
+	lpkgsetup  # choose it-IT and uninstall it.
+
+diff-winre-winpe:
+	diff -u <(cat winpe-LPs-01-all-files.txt | awk '{ gsub(/^..|_.+/, ""); print }') <(cat winpe-LPs-00-found-integrated-packages.txt | awk '{ sub(/-Package~.+/, ""); print tolower($$0) }')
