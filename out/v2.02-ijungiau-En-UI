@@ -1,0 +1,52 @@
+powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
+
+LCID             Name             DisplayName                                                                                                                                                  
+----             ----             -----------                                                                                                                                                  
+1033             en-US            English (United States)                                                                                                                                      
+1040             it-IT            Italian (Italy)                                                                                                                                              
+
+LanguageTag     : en-US
+Autonym         : English (United States)
+EnglishName     : English
+LocalizedName   : Inglese (Stati Uniti d'America)
+ScriptName      : Latino
+InputMethodTips : {0409:00000409}
+Spellchecking   : True
+Handwriting     : False
+
+
+LanguageTag     : it-IT
+Autonym         : italiano (Italia)
+EnglishName     : Italian
+LocalizedName   : Italiano (Italia)
+ScriptName      : Latino
+InputMethodTips : {0410:00000410}
+Spellchecking   : True
+Handwriting     : False
+
+
+
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.3636
+
+Image Version: 10.0.19045.3930
+
+Reporting online international settings.
+
+Default system UI language : it-IT
+The UI language fallback is : en-US
+System locale : it-IT
+Default time zone : FLE Standard Time
+Active keyboard(s) : 0409:00000409, 0410:00000410
+Keyboard layered driver : Tastiera avanzata PC/AT (101/102 tasti)
+
+Installed language(s): en-US
+  Type : Partially localized language, MUI type.
+  Fallback Languages it-IT
+Installed language(s): it-IT
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+
+The operation completed successfully.

@@ -1,0 +1,56 @@
+powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
+
+LCID             Name             DisplayName                                                                                                                                                  
+----             ----             -----------                                                                                                                                                  
+1033             en-US            English (United States)                                                                                                                                      
+1033             en-US            English (United States)                                                                                                                                      
+
+LanguageTag     : en-US
+Autonym         : English (United States)
+EnglishName     : English
+LocalizedName   : English (United States)
+ScriptName      : Latin
+InputMethodTips : {0409:00000409}
+Spellchecking   : True
+Handwriting     : False
+
+
+LanguageTag     : lt
+Autonym         : lietuviu
+EnglishName     : Lithuanian
+LocalizedName   : Lithuanian
+ScriptName      : Latin
+InputMethodTips : {0427:A0010427}
+Spellchecking   : True
+Handwriting     : False
+
+
+
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.3636
+
+Image Version: 10.0.19045.5737
+
+Reporting online international settings.
+
+Default system UI language : en-US
+System locale : en-US
+Default time zone : FLE Standard Time
+Active keyboard(s) : 0409:00000409, 0427:a0000427, 0427:a0010427
+Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)
+
+Installed language(s): de-DE
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+Installed language(s): en-US
+  Type : Fully localized language.
+Installed language(s): it-IT
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+Installed language(s): lt-LT
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+
+The operation completed successfully.

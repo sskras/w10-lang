@@ -1,0 +1,21 @@
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Strumento Gestione e manutenzione immagini distribuzione
+Versione: 10.0.19041.3636
+
+Versione immagine: 10.0.19045.3930
+
+Creazione rapporto impostazioni internazionali online in corso.
+
+Lingua predefinita dell'interfaccia utente del sistema : it-IT
+Fallback della lingua dell'interfaccia utente : en-US
+Impostazioni locali del sistema : it-IT
+Fuso orario predefinito : W. Europe Standard Time
+Tastiere attive : 0410:00000410
+Driver su pi— livelli per la tastiera : Tastiera avanzata PC/AT (101/102 tasti)
+
+Lingue installate: it-IT
+  Tipo: lingua parzialmente localizzata, tipo MUI.
+  Lingue di fallback: en-US
+
+Operazione completata.

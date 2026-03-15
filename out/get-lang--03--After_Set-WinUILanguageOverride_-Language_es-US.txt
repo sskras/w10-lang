@@ -1,0 +1,40 @@
+powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
+
+LCID             Name             DisplayName                                                                                                                                                  
+----             ----             -----------                                                                                                                                                  
+1033             en-US            Inglese (Stati Uniti)                                                                                                                                        
+1033             en-US            Inglese (Stati Uniti)                                                                                                                                        
+1033             en-US            Inglese (Stati Uniti)                                                                                                                                        
+
+LanguageTag     : it-IT
+Autonym         : italiano (Italia)
+EnglishName     : Italian
+LocalizedName   : Italiano (Italia)
+ScriptName      : Latino
+InputMethodTips : {}
+Spellchecking   : True
+Handwriting     : False
+
+
+
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Strumento Gestione e manutenzione immagini distribuzione
+Versione: 10.0.19041.3636
+
+Versione immagine: 10.0.19045.3930
+
+Creazione rapporto impostazioni internazionali online in corso.
+
+Lingua predefinita dell'interfaccia utente del sistema : it-IT
+Fallback della lingua dell'interfaccia utente : en-US
+Impostazioni locali del sistema : en-US
+Fuso orario predefinito : W. Europe Standard Time
+Tastiere attive : 0409:00000409, 0410:00000410
+Driver su pi— livelli per la tastiera : Tastiera avanzata PC/AT (101/102 tasti)
+
+Lingue installate: it-IT
+  Tipo: lingua parzialmente localizzata, tipo MUI.
+  Lingue di fallback: en-US
+
+Operazione completata.

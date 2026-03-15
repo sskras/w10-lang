@@ -1,0 +1,63 @@
+powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
+
+LCID             Name             DisplayName                                                                                                                                                  
+----             ----             -----------                                                                                                                                                  
+1063             lt-LT            Lithuanian (Lithuania)                                                                                                                                       
+1033             en-US            English (United States)                                                                                                                                      
+
+LanguageTag     : lt
+Autonym         : lietuviu
+EnglishName     : Lithuanian
+LocalizedName   : Lietuviu
+ScriptName      : Lotynu
+InputMethodTips : {0427:00010427}
+Spellchecking   : True
+Handwriting     : False
+
+
+LanguageTag     : en-US
+Autonym         : English (United States)
+EnglishName     : English
+LocalizedName   : Anglu (Jungtines Valstijos)
+ScriptName      : Lotynu
+InputMethodTips : {0409:00000409}
+Spellchecking   : True
+Handwriting     : False
+
+
+LanguageTag     : de-DE
+Autonym         : Deutsch (Deutschland)
+EnglishName     : German
+LocalizedName   : Vokieciu (Vokietija)
+ScriptName      : Lotynu
+InputMethodTips : {0407:00000407}
+Spellchecking   : True
+Handwriting     : False
+
+
+
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.844
+
+Image Version: 10.0.19042.1586
+
+Reporting online international settings.
+
+Default system UI language : en-US
+System locale : en-US
+Default time zone : FLE Standard Time
+Active keyboard(s) : 0427:00010427, 0407:00000407, 0409:00000409
+Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)
+
+Installed language(s): de-DE
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+Installed language(s): en-US
+  Type : Fully localized language.
+Installed language(s): lt-LT
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+
+The operation completed successfully.

@@ -63,4 +63,4 @@ set-lang:
 	lpkgsetup  # choose it-IT and uninstall it.
 
 diff-winre-winpe:
-	diff -u <(cat winpe-LPs-01-all-files.txt | awk '{ gsub(/^..|_.+/, ""); print }') <(cat winpe-LPs-00-found-integrated-packages.txt | awk '{ sub(/-Package~.+/, ""); print tolower($$0) }')
+	diff -u <(cat out/winpe-LPs-01-all-files.txt | awk '{ gsub(/^..|_.+/, ""); print }') <(cat out/winpe-LPs-00-found-integrated-packages.txt | awk '{ sub(/-Package~.+/, ""); print tolower($$0) }')

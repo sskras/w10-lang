@@ -1,0 +1,23 @@
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.3636
+
+Image Version: 10.0.19045.5608
+
+Reporting online international settings.
+
+Default system UI language : it-IT
+The UI language fallback is : en-US
+System locale : it-IT
+Default time zone : W. Europe Standard Time
+Active keyboard(s) : 0409:00000409, 0410:00000410
+Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)
+
+Installed language(s): en-US
+  Type : Fully localized language.
+Installed language(s): it-IT
+  Type : Partially localized language, MUI type.
+  Fallback Languages en-US
+
+The operation completed successfully.

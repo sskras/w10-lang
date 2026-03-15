@@ -1,0 +1,40 @@
+diff -u <(cat winpe-LPs-01-all-files.txt | awk '{ gsub(/^..|_.+/, ""); print }') <(cat winpe-LPs-00-found-integrated-packages.txt | awk '{ sub(/-Package~.+/, ""); print tolower($0) }')
+--- /dev/fd/63	2025-04-09 19:58:13.000000000 +0300
++++ /dev/fd/62	2025-04-09 19:58:13.000000000 +0300
+@@ -1,35 +1,19 @@
+-lp.cab
+ winpe-appxpackaging
+ winpe-atbroker
+ winpe-audiocore
+ winpe-audiodrivers
+-winpe-dismcmdlets
+-winpe-dot3svc
+ winpe-enhancedstorage
+-winpe-gamingperipherals
+ winpe-hta
+-winpe-legacysetup
+-winpe-mdac
+ winpe-narrator
+-winpe-netfx
+ winpe-opcservices
+-winpe-platformid
+-winpe-pmemcmdlets
+-winpe-powershell
+-winpe-pppoe
+ winpe-rejuv
+-winpe-rndis
+ winpe-scripting
+-winpe-securebootcmdlets
+ winpe-securestartup
+-winpe-setup-client
+-winpe-setup-server
+-winpe-setup
++winpe-speech-tts-it-it
+ winpe-speech-tts
+ winpe-srh
+ winpe-srt
+ winpe-storagewmi
+ winpe-wds-tools
+ winpe-wifi
+-winpe-winrecfg
+ winpe-wmi

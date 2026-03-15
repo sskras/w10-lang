@@ -1,0 +1,47 @@
+powershell 'Get-Culture; Get-WinSystemLocale; Get-WinUILanguageOverride; Get-WinUserLanguageList'
+
+LCID             Name             DisplayName                                                                                                                                                  
+----             ----             -----------                                                                                                                                                  
+1033             en-US            English (United States)                                                                                                                                      
+1033             en-US            English (United States)                                                                                                                                      
+
+LanguageTag     : en-US
+Autonym         : English (United States)
+EnglishName     : English
+LocalizedName   : English (United States)
+ScriptName      : Latin
+InputMethodTips : {0409:00000409}
+Spellchecking   : True
+Handwriting     : False
+
+
+LanguageTag     : it-IT
+Autonym         : italiano (Italia)
+EnglishName     : Italian
+LocalizedName   : Italian (Italy)
+ScriptName      : Latin
+InputMethodTips : {0410:00000410}
+Spellchecking   : True
+Handwriting     : False
+
+
+
+C:/Windows/System32/Dism.exe //online //get-intl
+
+Deployment Image Servicing and Management tool
+Version: 10.0.19041.3636
+
+Image Version: 10.0.19045.3930
+
+Reporting online international settings.
+
+Default system UI language : en-US
+System locale : en-US
+Default time zone : FLE Standard Time
+Active keyboard(s) : 0409:00000409, 0410:00000410
+Keyboard layered driver : PC/AT Enhanced Keyboard (101/102-Key)
+
+Installed language(s): en-US
+  Type : Fully localized language.
+
+The operation completed successfully.

@@ -1,0 +1,17 @@
+Renato@DESKTOP-226CBKV:~/debug/w10-lang$ reg query 'HKLM\SYSTEM\CurrentControlSet\Control\Nls\Language'
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Language
+    InstallLanguage    REG_SZ    0410
+    InstallLanguageFallback    REG_MULTI_SZ    en-US
+    Default    REG_SZ    0409
+
+Renato@DESKTOP-226CBKV:~/debug/w10-lang$ reg add 'HKLM\SYSTEM\CurrentControlSet\Control\Nls\Language' //v InstallLanguage //d 0409
+Value InstallLanguage exists, overwrite(Yes/No)? Yes
+The operation completed successfully.
+Renato@DESKTOP-226CBKV:~/debug/w10-lang$ reg query 'HKLM\SYSTEM\CurrentControlSet\Control\Nls\Language'
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Language
+    InstallLanguage    REG_SZ    0409
+    InstallLanguageFallback    REG_MULTI_SZ    en-US
+    Default    REG_SZ    0409
+
